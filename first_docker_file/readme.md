@@ -1,3 +1,5 @@
+## Install Docker on EC2 instance on AWS
+
 1. Create EC2 instace (ubuntu) on AWS
 2. ssh into it
 3. sudo apt update -y
@@ -17,20 +19,24 @@ Clone this repository and move to example folder
 git clone https://github.com/parkarneha39/docker-learning.git
 cd  examples
 ```
-Login to Docker [Create an account with https://hub.docker.com/]
-docker login
+## Login to Docker 
+[Create an account with https://hub.docker.com/]
+`docker login`
 Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+```
 Username: parkarneha39
 Password:
+```
 WARNING! Your password will be stored unencrypted in /home/ubuntu/.docker/config.json.
 Configure a credential helper to remove this warning. See
 https://docs.docker.com/engine/reference/commandline/login/#credentials-store
 
 Login Succeeded
-Build your first Docker Image
-You need to change the username accoringly in the below command
 
+## Build your first Docker Image
+```
 docker build -t parkarneha39/my-first-docker-image:latest .
+```
 Output of the above command
 ```
    Sending build context to Docker daemon  3.072kB
@@ -63,9 +69,9 @@ Successfully built cab6c445e415
 Successfully tagged parkarneha39/my-first-docker-image:latest
 ```
 Verify Docker Image is created
-
+```
 docker images
-
+```
 Output
 ```
 REPOSITORY                           TAG       IMAGE ID       CREATED         SIZE
@@ -73,15 +79,16 @@ parkarneha39/my-first-docker-image   latest    cab6c445e415   2 minutes ago   56
 ubuntu                               latest    bbdabce66f1b   2 weeks ago     78.1MB
 hello-world                          latest    1b44b5a3e06a   6 months ago    10.1kB
 ```
-Run your First Docker Container
-docker run -it parkarneha39/my-first-docker-image
+## Run your First Docker Container
+`docker run -it parkarneha39/my-first-docker-image`
 
 Output
 
-Hello World
+`Hello World`
 
-Push the Image to DockerHub and share it with the world
-docker push parkarneha39/my-first-docker-image
+## Push the Image to DockerHub and share it with the world
+
+`docker push parkarneha39/my-first-docker-image`
 
 Output
 ```
